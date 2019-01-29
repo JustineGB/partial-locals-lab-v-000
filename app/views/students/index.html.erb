@@ -15,7 +15,3 @@
   <p>There are no students with the name: <%= params[:name] %>.</p>
 <% end %>
 
-<% @students.each do |student| %>
-  <li><%= render partial: 'student', locals: {student: student } %></li>
-<% end %>
-</ul> 
