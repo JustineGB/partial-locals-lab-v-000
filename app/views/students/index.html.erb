@@ -8,7 +8,6 @@
 
 <ul>
   <% if @students.present? %> 
-<%= params.inspect %>
     <p>There are no students with the name: <%= params[:name] %>.</p>
   <% else %>
     <% @students.each do |student| %>
