@@ -7,7 +7,7 @@
 <% end %>
 
 <ul>
-  <% if @students.present? %> 
+  <% if @students.empty? %> 
     <p>There are no students with the name: <%= params[:name] %>.</p>
   <% else %>
     <% @students.each do |student| %>
