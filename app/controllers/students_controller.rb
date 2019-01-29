@@ -22,7 +22,7 @@ class StudentsController < ApplicationController
 
   def index
     if params[:name]
-      binding.pry
+      #binding.pry
       @students = Student.search(params[:name])
     else 
       @students = Student.all
