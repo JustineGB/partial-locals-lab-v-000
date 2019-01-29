@@ -7,9 +7,13 @@
 <% end %>
 
 <ul>
-<% @students.each do |student| %>
-  <li><%= render partial: 'student', locals: {student: student } %></li>
-<% end %>
+  <% if @students.nil? %> 
+    <p>There are no students with the name: <%= params[:name] %>.</p>
+  <% else %>
+    <% @students.each do |student| %>
+      <li><%= render partial: 'student', locals: {student: student } %></li>
+    <% end %>
+  <% end %> 
 </ul> 
 
 
